@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon -x babel-node src/index.js"
+    "start": "nodemon -x babel-node src/index.js",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "babel": {
     "presets": [
@@ -27,6 +33,8 @@
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
     "babel-loader": "^9.1.3",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "nodemon": "^3.0.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
