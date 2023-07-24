@@ -1,7 +1,19 @@
 // tsconfig.json
 {
   "compilerOptions": {
+    "target": "ES6",
     "noImplicitAny": true,
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "DOM",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext"
+  },
+  "include": [
+    "src"
+  ]
 }
