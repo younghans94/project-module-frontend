@@ -1,2 +1,2 @@
-# project-module
-frontend project stydy
+# project-module-frontend
+frontend project study
