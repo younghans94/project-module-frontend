@@ -1,9 +1,11 @@
 const path = require('path')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index',
   mode: 'development',
+  devtool:"source-map",
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.less']
   },
@@ -65,7 +67,15 @@ module.exports = {
     ]
   },
   devServer: {
-
+    hot: true,
   },
-  plugins: [new ESLintPlugin({ extensions: ['.js', '.ts'] })]
+  plugins: [
+    new ESLintPlugin({ extensions: ['.js', '.ts'] }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: 'index.html',
+      inject: true,
+      dev: true,
+    })
+  ]
 }
