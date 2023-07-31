@@ -5,6 +5,7 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "jsx": "react-jsx",
+    "esModuleInterop": true,
     "lib": [
       "dom",
       "DOM",

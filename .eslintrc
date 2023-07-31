@@ -1,4 +1,6 @@
 // .eslintrc
 {
-  "extends": "standard"
+  "extends": [
+    "react-app"
+  ]
 }
