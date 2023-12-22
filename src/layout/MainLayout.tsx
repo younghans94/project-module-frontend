@@ -4,6 +4,7 @@ import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 
 import "./MainLayout.less";
+import {Flex} from '../example/web-layout/flex';
 
 const { Header, Content, Sider } = Layout;
 
@@ -59,16 +60,7 @@ const MainLayout: React.FC = () => {
                         <Breadcrumb.Item>List</Breadcrumb.Item>
                         <Breadcrumb.Item>App</Breadcrumb.Item>
                     </Breadcrumb>
-                    <Content
-                        style={{
-                            padding: 24,
-                            margin: 0,
-                            minHeight: 280,
-                            background: colorBgContainer,
-                        }}
-                    >
-                        Content
-                    </Content>
+                    <Flex/>
                 </Layout>
             </Layout>
         </Layout>
