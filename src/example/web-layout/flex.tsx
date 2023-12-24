@@ -1,5 +1,5 @@
-
+import "./flex.less";
 
 export const Flex = () => {
-    return <div>Flex</div>;
+    return <div className="flex">Flex</div>;
 }

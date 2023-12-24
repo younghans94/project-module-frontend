@@ -1,5 +1,5 @@
 import {createRoot} from 'react-dom/client';
-import MainLayout from './layout/MainLayout';
+import {Flex} from './example/web-layout/flex';
 
 const root = createRoot(document.getElementById('root'));
-root.render(<MainLayout />);
+root.render(<Flex />);
