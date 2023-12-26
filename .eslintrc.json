@@ -1,0 +1,106 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "unused-imports"
+  ],
+  "rules": {
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "import/no-anonymous-default-export": "off",
+    "prefer-template": "off",
+    "no-debugger": 1,
+    "no-console": [
+      1,
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "prefer-const": 1,
+    "one-var": [
+      2,
+      "never"
+    ],
+    "no-param-reassign": [
+      0,
+      {
+        "props": true
+      }
+    ],
+    "no-else-return": [
+      2,
+      {
+        "allowElseIf": false
+      }
+    ],
+    "no-unneeded-ternary": [
+      2,
+      {
+        "defaultAssignment": false
+      }
+    ],
+    "prefer-arrow-callback": [
+      1
+    ],
+    "prefer-destructuring": [
+      1,
+      {
+        "object": true,
+        "array": false
+      }
+    ],
+    "object-shorthand": [
+      2,
+      "always",
+      {
+        "avoidQuotes": true
+      }
+    ],
+    "template-curly-spacing": [
+      2
+    ],
+    "space-before-function-paren": 0,
+    "dot-notation": [
+      1,
+      {
+        "allowKeywords": true
+      }
+    ],
+    "@typescript-eslint/array-type": [
+      2
+    ],
+    "import/order": [
+      2,
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always-and-inside-groups"
+      }
+    ],
+    "import/first": [
+      2
+    ],
+    "import/no-duplicates": [
+      2
+    ],
+    "import/newline-after-import": [
+      2
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": [
+      0
+    ],
+    "unused-imports/no-unused-imports": [
+      2
+    ]
+  }
+}
