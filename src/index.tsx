@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 
-import { Layout } from "./example/web-layout/Layout";
+import { Layout } from "./example/web/layout/Layout";
 
 // import MainLayout from "./layout/MainLayout";
 
