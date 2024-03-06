@@ -16,17 +16,23 @@
 2. 逻辑坐标轴：
    - 内联轴：书写模式的方向
    - 块轴：盒子自动流的方向
-3. 盒子模型：容器和容器空间
+3. 盒子模型：容器和容器空间; 盒子模型通常不会被继承, 使用inherit可以强制继承
    - block：块容器--指单独撑满一行的容器
    - inline：内联容器--不单独占有区域由内部支撑的容器
    - flex/inline-flex：弹性盒子容器
    - grid/inline-grid：网格盒子容器
 4. 样式
+   - box-sizing: content-box: padding/border会影响容器大小, border-box: padding/border不会影响容器大小
    - margin: 外边距, 是不属于被设置元素的部分(比如被设置元素的背景色是设置不到margin部分的)
    - padding: 内边距, 属于被设置元素部分(比如被设置元素的背景色是覆盖padding部分的)
    - gap: 间隔, 属于被设置元素部分, 父类元素用来控制内部子元素间隔，是不属于子元素的部分
+   - overflow: visible/hidden/scroll/auto: auto是在只有内容溢出时才显示滚动条
+     - overflow-x: 控制水平方向的溢出表现
+     - overflow-y: 控制竖直方向的溢出表现
    - T、R、B、L: 物理方向
-   - T、S、B、E：逻辑方向（以start、end替换right、left）[CSS逻辑属性](https://www.w3.org/TR/css-logical-1/#intro)
+   - T、S、B、E：逻辑方向（以start、end替换right、left）[CSS逻辑属性](https://www.w3.org/TR/css-logical-1/#intro)  
+备注:
+   - 百分比高度的前提：必须给父容器明确定义一个高度（容器的高度通常会有子元素决定, 父元素不明确高度可能会造成死循环）
 
 #### 弹性盒子 -- Flex
 1. 主/侧轴：Flexbox 中的主轴由 flex-direction 属性设置，默认情况下，主轴沿行方向（内联轴 Inline Axis）分布，如果该属性为 column ，则主轴沿列方向（块轴 Block Axis）；
@@ -37,3 +43,6 @@
     - align-content：沿 Flex 容器的侧轴分配 Flex 容器的剩余空间；
     - place-content：它是 justify-content 和 align-content 的简写属性。
     - align-items: flex元素内部的布局方式
+
+#### 常见布局设计
+1. 等高列布局
