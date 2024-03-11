@@ -1,0 +1,25 @@
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  width: 100px;
+  .mobile-announcement-content {
+    color: #2579FE;
+    font-size: 14px;
+    transform: translateX(50%);
+    animation: marqueeAnim linear 0s infinite;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 2;
+    white-space: pre;
+  }
+}
+
+
+@keyframes marqueeAnim {
+  100% {
+    transform: translateX(-100%);
+  }
+  0% {
+    transform: translateX(calc(0% - var(--text-container-width)));
+  }
+}
