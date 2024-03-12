@@ -22,7 +22,7 @@ const Marquee = ({ text, className }: { text: string; className?: string }) => {
         animationDuration: text.length * 0.2 + 5 + "s",
         paddingLeft: "100%",
         textShadow: `${textWidth}px 0 red`,
-        animationFillMode: "both"
+        animationFillMode: "both",
       });
       containerRef.current.style.setProperty("--text-container-width", `${containerWidth}px`);
     }

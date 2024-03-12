@@ -5,4 +5,4 @@ import { createRoot } from "react-dom/client";
 import Marquee from "./basic/animate/marquee/Marquee";
 
 const root = createRoot(document.getElementById("root"));
-root.render(<Marquee text={"abcdefghigklmno"} />);
+root.render(<Marquee text={"abcdefghigklmnopq"} />);
