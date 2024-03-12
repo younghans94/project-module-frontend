@@ -22,7 +22,9 @@ const Marquee = ({ text, className }: { text: string; className?: string }) => {
         animationDuration: text.length * 0.2 + 5 + "s",
         paddingLeft: "100%",
         textShadow: `${textWidth}px 0 red`,
+        animationFillMode: "both"
       });
+      containerRef.current.style.setProperty("--text-container-width", `${containerWidth}px`);
     }
     // 文字首尾要能连起来;
     // todo 文字起始位置可以解决
@@ -32,14 +34,12 @@ const Marquee = ({ text, className }: { text: string; className?: string }) => {
     //   100% { transform: translateX(-100%); }
     // }`,
     // );
-    containerRef.current.style.setProperty("--text-container-width", `${containerWidth}px`);
   }, [text]);
 
   return (
     <div ref={containerRef} className={classNames("marquee-container")}>
       <div style={animationConfig} className="mobile-announcement-content">
         <span ref={textRef}>{text}</span>
-        <span>{text}</span>
       </div>
     </div>
   );
