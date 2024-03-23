@@ -44,4 +44,5 @@
     - 定义需要在作用域中且以``--``开头, 如``:root { --main-font: 12px }``
     - 使用的地方需要以 ``var()``包裹且其第二个参数未默认值, 如``var(--main-font, 10px)``
     - js改变值: 找到定义的dom层级获取element对象, 以``element.style.setProperty("--main-font", "14px")``处理
+    - @property: 
 

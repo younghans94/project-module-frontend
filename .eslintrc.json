@@ -1,4 +1,18 @@
 {
+  // 默认情况下，ESLint会在所有父级组件中寻找配置文件，一直到根目录。ESLint一旦发现配置文件中有   "root": true，它就会停止在父级目录中寻找
+  "root": true,
+  "overrides": [
+    {
+      "files": ["webpack.config.js", "index.tsx"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "var2": "writable"
+  },
   "extends": [
     "react-app",
     "react-app/jest",
@@ -10,6 +24,7 @@
     "unused-imports"
   ],
   "rules": {
+    "no-undef": "warn",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "import/no-anonymous-default-export": "off",
@@ -25,10 +40,10 @@
       }
     ],
     "prefer-const": 1,
-    "one-var": [
-      2,
-      "never"
-    ],
+//    "one-var": [
+//      2,
+//      "never"
+//    ],
     "no-param-reassign": [
       0,
       {
