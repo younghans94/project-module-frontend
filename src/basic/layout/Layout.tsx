@@ -2,7 +2,7 @@ import { Input, InputRef } from "antd";
 import { CSSProperties, useRef, useState } from "react";
 
 import "./Layout.less";
-import { jsonUtils } from "../utils/jsonUtils";
+import { jsonUtils } from "../utils/json.utils";
 
 const WidgetExampleSize = 2;
 const LayoutExampleSize = 2;
