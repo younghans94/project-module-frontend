@@ -11,12 +11,18 @@ dependencies:
   '@react-spring/web':
     specifier: ^9.7.3
     version: 9.7.3(react-dom@18.2.0)(react@18.2.0)
+  '@types/lodash':
+    specifier: ^4.17.0
+    version: 4.17.0
   antd:
     specifier: ^5.7.3
     version: 5.7.3(react-dom@18.2.0)(react@18.2.0)
   classnames:
     specifier: ^2.5.1
     version: 2.5.1
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -4728,6 +4734,10 @@ packages:
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
+
+  /@types/lodash@4.17.0:
+    resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
+    dev: false
 
   /@types/mime-types@2.1.4:
     resolution: {integrity: sha512-lfU4b34HOri+kAY5UheuFMWPDOI+OPceBSHZKp69gEyTL/mmJ4cnU6Y/rlme3UL3GyOn6Y42hyIEw0/q8sWx5w==}
@@ -15256,12 +15266,12 @@ packages:
     dev: true
 
   registry.npmmirror.com/@types/prop-types@15.7.5:
-    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@types/prop-types/-/prop-types-15.7.5.tgz}
+    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://mirrors.huaweicloud.com/repository/npm/, tarball: https://registry.npmmirror.com/@types/prop-types/-/prop-types-15.7.5.tgz}
     name: '@types/prop-types'
     version: 15.7.5
 
   registry.npmmirror.com/@types/react@18.2.16:
-    resolution: {integrity: sha512-LLFWr12ZhBJ4YVw7neWLe6Pk7Ey5R9OCydfuMsz1L8bZxzaawJj2p06Q8/EFEHDeTBQNFLF62X+CG7B2zIyu0Q==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@types/react/-/react-18.2.16.tgz}
+    resolution: {integrity: sha512-LLFWr12ZhBJ4YVw7neWLe6Pk7Ey5R9OCydfuMsz1L8bZxzaawJj2p06Q8/EFEHDeTBQNFLF62X+CG7B2zIyu0Q==, registry: https://mirrors.huaweicloud.com/repository/npm/, tarball: https://registry.npmmirror.com/@types/react/-/react-18.2.16.tgz}
     name: '@types/react'
     version: 18.2.16
     dependencies:
@@ -15270,11 +15280,11 @@ packages:
       csstype: registry.npmmirror.com/csstype@3.1.2
 
   registry.npmmirror.com/@types/scheduler@0.16.3:
-    resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@types/scheduler/-/scheduler-0.16.3.tgz}
+    resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==, registry: https://mirrors.huaweicloud.com/repository/npm/, tarball: https://registry.npmmirror.com/@types/scheduler/-/scheduler-0.16.3.tgz}
     name: '@types/scheduler'
     version: 0.16.3
 
   registry.npmmirror.com/csstype@3.1.2:
-    resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/csstype/-/csstype-3.1.2.tgz}
+    resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==, registry: https://mirrors.huaweicloud.com/repository/npm/, tarball: https://registry.npmmirror.com/csstype/-/csstype-3.1.2.tgz}
     name: csstype
     version: 3.1.2
