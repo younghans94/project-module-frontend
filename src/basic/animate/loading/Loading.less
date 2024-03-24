@@ -1,19 +1,19 @@
-html, body {
-  width: 100%;
-  height: 100%;
+.loadings {
   display: flex;
-  flex-direction: row;
-  background: #000;
+  gap: 10px;
+  flex: 1;
 }
 
-.g-container {
+.container {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 120px;
   height: 120px;
-  margin: auto;
 }
 
-.g-box {
+.dot {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,33 +25,48 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #01fd28;
-    border-radius: 50%;
+    background: red;
   }
 }
 
-
-.g-box {
-  --width: 10px;
+.line {
+  height: 0;
+  width: 10px;
   --index: 0;
-  width: var(--width);
-  height: var(--width);
-  margin-top: calc(var(--width) / -2);
-  margin-left: calc(var(--width) / -2);
-  transform: rotate(calc(var(--index) * 18deg)) translate(0, 55px);
+  background: blue;
+  animation: spring 2s ease-in-out infinite;
+  animation-delay: calc(var(--index) * 0.1s);
+}
 
-  &::before {
-    // animation: scale 2s infinite #{$i * -0.1}s linear;
-    filter: hue-rotate(calc(var(--index) * 18deg));
-    transform: scale(calc(var(--index) / 20 ));
-    will-change: transform;
+.circle {
+  animation: rotate 2s steps(20) infinite;
+
+  .dot {
+    --width: 10px;
+    --index: 0;
+    width: var(--width);
+    height: var(--width);
+    margin-top: calc(var(--width) / -2);
+    margin-left: calc(var(--width) / -2);
+    transform: rotate(calc(var(--index) * 18deg)) translate(0, 55px);
+
+    &::before {
+      // animation: scale 2s infinite #{$i * -0.1}s linear;
+      border-radius: 50%;
+      filter: hue-rotate(calc(var(--index) * 18deg));
+      transform: scale(calc(var(--index) / 20 ));
+      will-change: transform;
+    }
   }
 }
 
-.g-steps {
-  animation: rotate 2s steps(20) infinite;
-}
-.g-animation {
+//.wave {
+//  animation: spring 2s infinite ease-in-out;
+//
+//}
+
+
+.animation {
   animation: rotate 2s linear infinite;
 }
 
@@ -63,6 +78,18 @@ html, body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spring {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 120px;
+  }
+  100% {
+    height: 0;
   }
 }
 
