@@ -43,6 +43,8 @@
     - align-content：沿 Flex 容器的侧轴分配 Flex 容器的剩余空间；
     - place-content：它是 justify-content 和 align-content 的简写属性。
     - align-items: flex元素内部的布局方式
+  
+备注：[在线演示](https://xluos.github.io/demo/flexbox/)
 
 #### 常见布局设计
 1. 等高列布局
