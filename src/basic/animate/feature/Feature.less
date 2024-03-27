@@ -1,0 +1,28 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .mix {
+        height: 100px;
+        width: 100px;
+        background: rebeccapurple;
+        //transform: translate(0, -100%);
+        animation: fall-down 2s ease-in-out infinite;
+        &.add {
+            //animation-composition: add;
+        }
+        &.accumulate {
+            //animation-composition: accumulate;
+        }
+        &.replace {
+            //animation-composition: replace;
+        }
+    }
+}
+
+@keyframes fall-down {
+    100% {
+        transform: translate(0, calc(100vh));
+    }
+}
