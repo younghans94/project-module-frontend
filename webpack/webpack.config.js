@@ -8,7 +8,7 @@ module.exports = {
   mode: "development",
   devtool: "source-map",
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".less"],
+    extensions: [".ts", ".tsx", ".js", ".less", ".css"],
   },
   output: {
     filename: "[name].js",
@@ -17,15 +17,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.less$/,
+        test: /\.css$/,
         use: [
-          "style-loader",
-          "css-loader",
-          "less-loader",
-          {
-            loader: "less-loader",
-          },
+          "style-loader", // 将 CSS 注入 DOM
+          "css-loader", // 解析 CSS 文件
         ],
+      },
+      {
+        test: /\.less$/,
+        use: ["style-loader", "css-loader", "less-loader"],
       },
       {
         test: /\.js$/,

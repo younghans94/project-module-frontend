@@ -1,12 +1,16 @@
 import { createRoot } from "react-dom/client";
+
+import "@fx-ui/fine-design/dist/fine_design.css";
+
 import "./index.less";
 
 // import { Instance } from "./basic/css/instance/Instance";
 
 // import MainLayout from "./layout/MainLayout";
 // import { Animate } from "./basic/animate/spring/Animate";
-import App from "./basic/animate/loading/Loading";
+// import App from "./basic/animate/loading/Loading";
+import VirtualListDemo from "./basic/component/virtual/List";
 // import { Loading } from "./basic/animate/loading/Loading";
 
 const root = createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(<VirtualListDemo />);

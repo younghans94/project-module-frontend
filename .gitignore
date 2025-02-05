@@ -4,3 +4,4 @@
 /webpack/dist
 /.idea/
 public/dist
+pnpm-lock.yaml
