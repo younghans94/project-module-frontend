@@ -1,6 +1,8 @@
 import "./Amimate.less";
-import { useSpringValue, animated } from "@react-spring/web";
-import { useEffect } from "react";
+import { Button } from "@fx-ui/fine-design";
+import { useSpringValue, animated, useTransition } from "@react-spring/web";
+import { isEmpty } from "lodash";
+import { useEffect, useState } from "react";
 
 export const Animate = () => {
   const width = useSpringValue(0, {
@@ -20,4 +22,42 @@ export const Animate = () => {
   }, []);
 
   return <animated.div className="box" style={{ width }}></animated.div>;
+};
+
+export const SlideOverLayer = () => {
+  const [items, setItems] = useState([<div className={"slide-over-layer-content"} />]);
+  const transitions = useTransition(items, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: { duration: 1000 },
+  });
+
+  const onClick = () => {
+    if (isEmpty(items)) {
+      setItems([<div className={"slide-over-layer-content"} />]);
+    } else {
+      setItems([...items, <div className={"slide-over-layer-content"} />]);
+    }
+  };
+
+  return (
+    <>
+      <Button onClick={onClick}></Button>
+      {transitions((style, item) => (
+        <animated.div style={{ opacity: style.opacity }}>{item}</animated.div>
+      ))}
+    </>
+  );
+};
+
+export const MyComponent = ({ data = [1, 2, 3] }) => {
+  const transitions = useTransition(data, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: { duration: 1000 },
+  });
+
+  return transitions((style, item) => <animated.div style={style}>{item}</animated.div>);
 };
