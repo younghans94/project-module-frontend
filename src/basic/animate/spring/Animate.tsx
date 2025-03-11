@@ -33,7 +33,7 @@ export const SlideOverLayer = () => {
     config: { duration: 1000 },
   });
 
-  const onClick = () => {
+  const onAdd = () => {
     if (isEmpty(items)) {
       setItems([<div className={"slide-over-layer-content"} />]);
     } else {
@@ -41,9 +41,15 @@ export const SlideOverLayer = () => {
     }
   };
 
+  const onDelete = () => {
+    items.pop();
+    setItems([...items]);
+  };
+
   return (
     <>
-      <Button onClick={onClick}></Button>
+      <Button onClick={onAdd}></Button>
+      <Button onClick={onDelete}></Button>
       {transitions((style, item) => (
         <animated.div style={{ opacity: style.opacity }}>{item}</animated.div>
       ))}
