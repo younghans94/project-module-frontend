@@ -12,8 +12,9 @@ import "./index.less";
 // import { Animate } from "./basic/animate/spring/Animate";
 // import App from "./basic/animate/loading/Loading";
 // import VirtualListDemo from "./basic/component/virtual/List";
-import { MyComponent, SlideOverLayer } from "./basic/animate/spring/Animate";
+// import { MyComponent, SlideOverLayer } from "./basic/animate/spring/Animate";
+import { Message } from "./basic/component/message/Message";
 // import { Loading } from "./basic/animate/loading/Loading";
 
 const root = createRoot(document.getElementById("root"));
-root.render(<SlideOverLayer />);
+root.render(<Message />);
