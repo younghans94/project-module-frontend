@@ -1,4 +1,4 @@
-import VirtualList from "@fx-ui/fine-design/es/components/virtual-list";
+import { List } from "antd";
 import React from "react";
 
 const VirtualListDemo = () => {
@@ -18,18 +18,7 @@ const VirtualListDemo = () => {
   ]);
 
   return (
-    <VirtualList
-      virtual
-      data={items}
-      className="ep-list"
-      itemHeight={10}
-      height={100}
-      itemKey={"key"}
-    >
-      {(item) => {
-        return <li>{item.value}</li>;
-      }}
-    </VirtualList>
+    <List dataSource={items} renderItem={(item) => <div>{item.value}</div>} />
   );
 };
 

@@ -1,8 +1,6 @@
 // import { Input } from "@fx-ui/fine-design";
 import { createRoot } from "react-dom/client";
 
-import "@fx-ui/fine-design/dist/fine_design.css";
-
 import "./index.less";
 // import Marquee from "./basic/animate/marquee/Marquee";
 
@@ -13,8 +11,16 @@ import "./index.less";
 // import App from "./basic/animate/loading/Loading";
 // import VirtualListDemo from "./basic/component/virtual/List";
 // import { MyComponent, SlideOverLayer } from "./basic/animate/spring/Animate";
-import { Message } from "./basic/component/message/Message";
+import { Message, TriggerButton } from "./basic/component/message/Message";
+import { MessageProvider } from "./basic/component/message/useMessageStore";
+import { Button } from "antd";
 // import { Loading } from "./basic/animate/loading/Loading";
 
 const root = createRoot(document.getElementById("root"));
-root.render(<Message />);
+root.render(
+  <MessageProvider>
+    <div><TriggerButton/> <Message/></div>
+  </MessageProvider>
+);
+
+

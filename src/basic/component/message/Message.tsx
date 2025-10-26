@@ -3,6 +3,8 @@ import { ReactNode, useMemo } from "react";
 import { createPortal } from "react-dom";
 
 import { useMessageStore } from "./useMessageStore";
+import { Button } from "antd";
+import "./Message.less";
 
 export type Position = "top" | "bottom" | "left" | "right";
 
@@ -12,6 +14,18 @@ export interface MessageProps {
   duration?: number;
   id: number;
   position: Position;
+}
+
+export const TriggerButton = () => {
+  const {addMessage} = useMessageStore();
+
+  return <Button   onClick={() => addMessage({
+    type: "success",
+    content: "hahah",
+    id: 111,
+    duration: 1000,
+    position: "bottom"
+})}>add</Button>
 }
 
 export const Message = () => {
@@ -36,7 +50,7 @@ export const Message = () => {
   const message = (
     <div className={"message-list"}>
       {messageContent((style, item) => (
-        <animated.div style={style}></animated.div>
+        <animated.div className="message-item" style={style}>{item.content}</animated.div>
       ))}
     </div>
   );
