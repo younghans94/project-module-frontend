@@ -1,0 +1,65 @@
+.icon-container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .icon-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+}
+
+.firework-container {
+  transform: translate(-50%, -50%);
+  
+  .firework {
+    .particle {
+      stroke: #FF69B4;
+      
+      line {
+        stroke-linecap: round;
+        stroke-width: 1.5;
+        transform-origin: center;
+        animation: firework 1.5s ease-out infinite;
+      }
+    }
+  }
+}
+
+svg.heart {
+  min-width: 24px;
+  min-height: 24px;
+  width: 100px;
+  height: 200px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  
+  &:hover {
+    animation: heartbeat 1s infinite;
+  }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes firework {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

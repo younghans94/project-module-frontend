@@ -1,0 +1,139 @@
+.simple-banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-out;
+  }
+  
+  // 背景层 - 移动最慢，创造深度感
+  .background-layer {
+    z-index: 1;
+    
+    .bg-pattern {
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 50px 50px, 30px 30px, 40px 40px;
+      animation: backgroundMove 20s linear infinite;
+    }
+  }
+  
+  // 中间层 - 中等速度
+  .middle-layer {
+    z-index: 2;
+    
+    .floating-element {
+      position: absolute;
+      font-size: 24px;
+      animation: float 6s ease-in-out infinite;
+      
+      &:nth-child(1) {
+        top: 20%;
+        left: 20%;
+        animation-delay: 0s;
+      }
+      
+      &:nth-child(2) {
+        top: 60%;
+        right: 20%;
+        animation-delay: 3s;
+      }
+    }
+  }
+  
+  // 前景层 - 移动最快
+  .foreground-layer {
+    z-index: 3;
+    
+    .main-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      
+      h2 {
+        font-size: 2.5em;
+        margin: 0 0 10px 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        animation: titleGlow 3s ease-in-out infinite;
+      }
+      
+      p {
+        font-size: 1.2em;
+        margin: 0;
+        opacity: 0.9;
+        animation: subtitleFloat 4s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+// 视差滚动效果
+.simple-banner:hover {
+  .background-layer {
+    transform: translateY(-5px);
+  }
+  
+  .middle-layer {
+    transform: translateY(-10px);
+  }
+  
+  .foreground-layer {
+    transform: translateY(-15px);
+  }
+}
+
+// 动画定义
+@keyframes backgroundMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(5deg); }
+  50% { transform: translateY(-5px) rotate(0deg); }
+  75% { transform: translateY(-20px) rotate(-5deg); }
+}
+
+@keyframes titleGlow {
+  0%, 100% { 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(255,255,255,0.8);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+@keyframes subtitleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .simple-banner {
+    height: 150px;
+    
+    .foreground-layer .main-content {
+      h2 { font-size: 2em; }
+      p { font-size: 1em; }
+    }
+  }
+} 

@@ -14,13 +14,16 @@ import "./index.less";
 import { Message, TriggerButton } from "./basic/component/message/Message";
 import { MessageProvider } from "./basic/component/message/useMessageStore";
 import { Button } from "antd";
+import { SimpleBanner } from "./basic/animate/banner";
 // import { Loading } from "./basic/animate/loading/Loading";
 
 const root = createRoot(document.getElementById("root"));
-root.render(
-  <MessageProvider>
-    <div><TriggerButton/> <Message/></div>
-  </MessageProvider>
-);
+// root.render(
+//   <MessageProvider>
+//     <div><TriggerButton/> <Message/></div>
+//   </MessageProvider>
+// );
+
+root.render(<SimpleBanner />)
 
 
