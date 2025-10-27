@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './Banner.less';
+import React, { useEffect, useRef, useState } from "react";
+import "./Banner.less";
 
 interface BannerLayer {
   id: string;
-  type: 'image' | 'video';
+  type: "image" | "video";
   src: string;
   width: number;
   height: number;
@@ -24,9 +24,9 @@ interface AnimatedBannerProps {
 
 const AnimatedBanner: React.FC<AnimatedBannerProps> = ({
   layers,
-  className = '',
+  className = "",
   autoPlay = true,
-  loop = true
+  loop = true,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState(0);
@@ -37,8 +37,8 @@ const AnimatedBanner: React.FC<AnimatedBannerProps> = ({
     };
 
     if (autoPlay) {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
     }
   }, [autoPlay]);
 
@@ -49,12 +49,12 @@ const AnimatedBanner: React.FC<AnimatedBannerProps> = ({
       transform: `translate(${layer.translateX || 0}px, ${layer.translateY || 0}px) rotate(${layer.rotate || 0}deg) scale(${layer.scale || 1})`,
       opacity: layer.opacity ?? 1,
       zIndex: layer.zIndex || 0,
-      position: 'absolute' as const,
+      position: "absolute" as const,
       top: 0,
       left: 0,
     };
 
-    if (layer.type === 'video') {
+    if (layer.type === "video") {
       return (
         <video
           key={layer.id}
@@ -62,7 +62,7 @@ const AnimatedBanner: React.FC<AnimatedBannerProps> = ({
           playsInline
           style={{
             ...style,
-            objectFit: 'cover' as const,
+            objectFit: "cover" as const,
           }}
           src={layer.src}
           width={layer.width}
@@ -84,14 +84,14 @@ const AnimatedBanner: React.FC<AnimatedBannerProps> = ({
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className={`animated-banner ${className}`}
       style={{
-        position: 'relative',
-        width: '100%',
-        height: '180px',
-        overflow: 'hidden',
+        position: "relative",
+        width: "100%",
+        height: "180px",
+        overflow: "hidden",
       }}
     >
       {layers.map(renderLayer)}
@@ -99,4 +99,4 @@ const AnimatedBanner: React.FC<AnimatedBannerProps> = ({
   );
 };
 
-export default AnimatedBanner; 
+export default AnimatedBanner;

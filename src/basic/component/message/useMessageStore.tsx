@@ -38,7 +38,7 @@ export const MessageProvider = ({ children }: { children: ReactNode }) => {
 export const useMessageStore = () => {
   const context = useContext(MessageContext);
   if (context === undefined) {
-    throw new Error('useMessageStore must be used within a MessageProvider');
+    throw new Error("useMessageStore must be used within a MessageProvider");
   }
   return context;
 };

@@ -17,9 +17,7 @@ const VirtualListDemo = () => {
     { value: "item12", key: "12" },
   ]);
 
-  return (
-    <List dataSource={items} renderItem={(item) => <div>{item.value}</div>} />
-  );
+  return <List dataSource={items} renderItem={(item) => <div>{item.value}</div>} />;
 };
 
 export default VirtualListDemo;

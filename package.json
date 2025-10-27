@@ -5,6 +5,7 @@
   "scripts": {
     "start": "webpack serve --config ./webpack/webpack.config.js --watch",
     "build": "webpack build --config ./webpack/webpack.config.js",
+    "eslint:fix": "pnpm exec eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "commit": "git-cz"
   },
   "config": {

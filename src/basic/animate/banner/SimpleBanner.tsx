@@ -1,5 +1,5 @@
-import React from 'react';
-import './SimpleBanner.less';
+import React from "react";
+import "./SimpleBanner.less";
 
 const SimpleBanner: React.FC = () => {
   return (
@@ -8,13 +8,13 @@ const SimpleBanner: React.FC = () => {
       <div className="layer background-layer">
         <div className="bg-pattern"></div>
       </div>
-      
+
       {/* 中间层 - 中等速度 */}
       <div className="layer middle-layer">
         <div className="floating-element">🌟</div>
         <div className="floating-element">✨</div>
       </div>
-      
+
       {/* 前景层 - 移动最快 */}
       <div className="layer foreground-layer">
         <div className="main-content">
@@ -26,4 +26,4 @@ const SimpleBanner: React.FC = () => {
   );
 };
 
-export default SimpleBanner; 
+export default SimpleBanner;

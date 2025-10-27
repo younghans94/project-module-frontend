@@ -1,9 +1,9 @@
 import { animated, useTransition } from "@react-spring/web";
+import { Button } from "antd";
 import { ReactNode, useMemo } from "react";
 import { createPortal } from "react-dom";
 
 import { useMessageStore } from "./useMessageStore";
-import { Button } from "antd";
 import "./Message.less";
 
 export type Position = "top" | "bottom" | "left" | "right";
@@ -17,16 +17,27 @@ export interface MessageProps {
 }
 
 export const TriggerButton = () => {
-  const {addMessage} = useMessageStore();
+  const { addMessage } = useMessageStore();
 
-  return <Button   onClick={() => addMessage({
-    type: "success",
-    content: "hahah",
-    id: 111,
-    duration: 1000,
-    position: "bottom"
-})}>add</Button>
-}
+  return (
+    <div>
+      <Button
+        onClick={() =>
+          addMessage({
+            type: "success",
+            content: "hahah",
+            id: 111,
+            duration: 1000,
+            position: "bottom",
+          })
+        }
+      >
+        add
+      </Button>
+      <Button onClick={() => clearAll()}>clear</Button>
+    </div>
+  );
+};
 
 export const Message = () => {
   const { messageList } = useMessageStore();
@@ -50,7 +61,9 @@ export const Message = () => {
   const message = (
     <div className={"message-list"}>
       {messageContent((style, item) => (
-        <animated.div className="message-item" style={style}>{item.content}</animated.div>
+        <animated.div className="message-item" style={style}>
+          {item.content}
+        </animated.div>
       ))}
     </div>
   );
