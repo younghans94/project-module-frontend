@@ -24,6 +24,7 @@ const SonComponent = forwardRef(({ label = "输入框" }: SonProps, ref: Forward
   const inputRef = useRef<HTMLInputElement>(null);
 
   useImperativeHandle(ref, () => ({
+    ...inputRef,
     focus: () => {
       inputRef.current?.focus();
     },
