@@ -3,8 +3,8 @@
 // DO NOT CHANGE IT MANUALLY!
 import { history } from 'dumi';
 import React, { useState, useLayoutEffect, useCallback, type ReactNode } from 'react';
-import { RawIntlProvider, createIntl, createIntlCache } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/react-intl@7.1.14_react@18.3.1_typescript@5.9.2/node_modules/react-intl';
-import { useIsomorphicLayoutEffect } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/dumi@2.4.21_@babel+core@7.28.3_@swc+helpers@0.5.15_@types+node@24.10.0_@types+react@18._82ece280980415444aa4e0b162e15229/node_modules/dumi/dist/client/theme-api/utils.js'
+import { RawIntlProvider, createIntl, createIntlCache } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/react-intl@7.1.14_react@19.2.0_typescript@5.9.2/node_modules/react-intl';
+import { useIsomorphicLayoutEffect } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/dumi@2.4.21_@babel+core@7.28.3_@swc+helpers@0.5.15_@types+node@24.10.0_@types+react@19._cf418cccee749f9e8bd9bc8ccbf1670e/node_modules/dumi/dist/client/theme-api/utils.js'
 import { locales, messages } from './config';
 
 const cache = createIntlCache();

@@ -3,7 +3,7 @@
 // DO NOT CHANGE IT MANUALLY!
 import nprogress from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/nprogress@0.2.0/node_modules/nprogress';
 import './nprogress.css';
-import UserLoading from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/dumi@2.4.21_@babel+core@7.28.3_@swc+helpers@0.5.15_@types+node@24.10.0_@types+react@18._82ece280980415444aa4e0b162e15229/node_modules/dumi/dist/client/pages/Loading';
+import UserLoading from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/dumi@2.4.21_@babel+core@7.28.3_@swc+helpers@0.5.15_@types+node@24.10.0_@types+react@19._cf418cccee749f9e8bd9bc8ccbf1670e/node_modules/dumi/dist/client/pages/Loading';
 import React, { useLayoutEffect, type FC } from 'react';
 import { useSiteData } from 'dumi';
 

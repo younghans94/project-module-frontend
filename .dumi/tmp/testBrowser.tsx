@@ -11,7 +11,7 @@ import type { Location } from 'history';
 
 
 import { getPluginManager as getDumiPluginManager } from './core/plugin';
-import { setPluginManager as setDumiPluginManager } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/dumi@2.4.21_@babel+core@7.28.3_@swc+helpers@0.5.15_@types+node@24.10.0_@types+react@18._82ece280980415444aa4e0b162e15229/node_modules/dumi/dist/client/theme-api/utils.js';
+import { setPluginManager as setDumiPluginManager } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/dumi@2.4.21_@babel+core@7.28.3_@swc+helpers@0.5.15_@types+node@24.10.0_@types+react@19._cf418cccee749f9e8bd9bc8ccbf1670e/node_modules/dumi/dist/client/theme-api/utils.js';
 const publicPath = '/';
 const runtimePublicPath = false;
 

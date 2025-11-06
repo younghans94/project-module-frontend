@@ -3,8 +3,8 @@
 // DO NOT CHANGE IT MANUALLY!
 import React, { useState, useEffect, useRef } from 'react';
 import { useOutlet, history } from 'dumi';
-import { warning } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/rc-util@5.44.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/rc-util';
-import { SiteContext, type ISiteContext } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/dumi@2.4.21_@babel+core@7.28.3_@swc+helpers@0.5.15_@types+node@24.10.0_@types+react@18._82ece280980415444aa4e0b162e15229/node_modules/dumi/dist/client/theme-api/context.js';
+import { warning } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/rc-util@5.44.4_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/rc-util';
+import { SiteContext, type ISiteContext } from '/Users/younghan/project/mine/project-module-frontend/node_modules/.pnpm/dumi@2.4.21_@babel+core@7.28.3_@swc+helpers@0.5.15_@types+node@24.10.0_@types+react@19._cf418cccee749f9e8bd9bc8ccbf1670e/node_modules/dumi/dist/client/theme-api/context.js';
 import { components } from '../meta/atoms';
 import { locales } from '../locales/config';
 

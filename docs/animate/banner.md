@@ -5,20 +5,10 @@
 ## 代码演示
 
 ```tsx
-import AnimatedBanner from '../../src/basic/animate/banner/Banner';
+import SimpleBanner from '../../src/basic/animate/banner/SimpleBanner';
 
 export default () => (
-  <AnimatedBanner
-    layers={[
-      {
-        id: '1',
-        type: 'image',
-        src: 'https://via.placeholder.com/800x180',
-        width: 800,
-        height: 180,
-      },
-    ]}
-  />
+  <SimpleBanner />
 );
 ```
 
