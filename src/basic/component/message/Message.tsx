@@ -17,7 +17,7 @@ export interface MessageProps {
 }
 
 export const TriggerButton = () => {
-  const { addMessage } = useMessageStore();
+  const { addMessage, clearAll } = useMessageStore();
 
   return (
     <div>

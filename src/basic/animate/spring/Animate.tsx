@@ -1,5 +1,5 @@
 import "./Amimate.less";
-import { Button } from "@fx-ui/fine-design";
+import { Button } from "antd";
 import { useSpringValue, animated, useTransition } from "@react-spring/web";
 import { isEmpty } from "lodash";
 import { useEffect, useState } from "react";

@@ -12,9 +12,14 @@
       "dom.iterable",
       "esnext"
     ],
-    "module": "esnext"
+    "module": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
-    "src"
+    "src",
+    "docs"
   ]
 }

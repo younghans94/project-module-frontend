@@ -5,6 +5,8 @@
   "scripts": {
     "start": "webpack serve --config ./webpack/webpack.config.js --watch",
     "build": "webpack build --config ./webpack/webpack.config.js",
+    "docs:dev": "dumi dev",
+    "docs:build": "dumi build",
     "eslint:fix": "pnpm exec eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "commit": "git-cz"
   },
@@ -53,6 +55,7 @@
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
+    "@types/node": "^24.10.0",
     "@types/react": "^18.2.16",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/parser": "^7.1.1",
@@ -60,6 +63,7 @@
     "commitizen": "^4.3.0",
     "css-loader": "^6.8.1",
     "cz-conventional-changelog": "^3.3.0",
+    "dumi": "^2.4.21",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.1.0",
