@@ -16,6 +16,7 @@ import { MessageProvider } from "./basic/component/message/useMessageStore";
 
 import { Loading } from "./basic/animate/loading/Loading";
 import ForwardRefInstance from "./basic/react_feature/forwardRefInstance";
+import { Effect } from "./basic/react_feature/effect";
 
 const root = createRoot(document.getElementById("root"));
 // root.render(
@@ -26,4 +27,4 @@ const root = createRoot(document.getElementById("root"));
 //   </MessageProvider>,
 // );
 
-root.render(<ForwardRefInstance />)
+root.render(<Effect />)
