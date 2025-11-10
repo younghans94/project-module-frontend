@@ -5,7 +5,7 @@
 ## 代码演示
 
 ```tsx
-import { Effect } from '../../src/basic/react_feature/effect';
+import { Effect } from '../../src/basic/react_feature/Effect';
 
 export default () => <Effect />;
 ```

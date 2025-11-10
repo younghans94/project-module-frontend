@@ -1,7 +1,6 @@
 {
   "name": "project-module",
   "version": "1.0.0",
-  "main": "src/index.tsx",
   "scripts": {
     "start": "webpack serve --config ./webpack/webpack.config.js --watch",
     "build": "webpack build --config ./webpack/webpack.config.js",

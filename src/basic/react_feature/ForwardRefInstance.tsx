@@ -1,5 +1,5 @@
 import React, { forwardRef, useRef, useImperativeHandle, ForwardedRef } from "react";
-import "./forwardRefInstance.less";
+import "./ForwardRefInstance.less";
 
 // 子组件暴露的方法接口
 interface SonRef {

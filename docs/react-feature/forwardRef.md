@@ -5,7 +5,7 @@
 ## 代码演示
 
 ```tsx
-import ForwardRefInstance from '../../src/basic/react_feature/forwardRefInstance';
+import ForwardRefInstance from '../../src/basic/react_feature/ForwardRefInstance';
 
 export default () => <ForwardRefInstance />;
 ```
