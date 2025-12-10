@@ -8,7 +8,7 @@ interface UseTimerProps {
 
 export const useTimer = (props: UseTimerProps) => {
   const { id, duration = 2000, onTimeout } = props;
-  const timer = useRef<number>();
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     start();

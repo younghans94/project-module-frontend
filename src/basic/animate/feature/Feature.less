@@ -8,21 +8,27 @@
         width: 100px;
         background: rebeccapurple;
         //transform: translate(0, -100%);
-        animation: fall-down 2s ease-in-out infinite;
+        //animation: fall-down 2s ease-in-out infinite;
+        animation:
+              move 2s ease-in-out infinite alternate,
+              spin 2s linear infinite;
         &.add {
-            //animation-composition: add;
+            animation-composition: add;
         }
         &.accumulate {
-            //animation-composition: accumulate;
+            animation-composition: accumulate;
         }
         &.replace {
-            //animation-composition: replace;
+            animation-composition: replace;
         }
     }
 }
 
-@keyframes fall-down {
-    100% {
-        transform: translate(0, calc(100vh));
-    }
+@keyframes move {
+  to { transform: translateX(100px); }
 }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
